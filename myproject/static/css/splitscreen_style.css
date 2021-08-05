@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+body {
+    font-family: 'Acme';
+}
+
+.leftside, .rightside {
+    height:100vh;
+    width:100%
+}
+
+.leftside {
+    background:orange
+}
+
+.rightside {
+    background:white
+}
+
+.leftside .lefttext {
+    font-weight: bold;
+    color: white;
+    font-size: 2.2em;
+}
+
+.rightside .righttext {
+    font-weight: bold;
+    color: orange;
+    font-size: 2.2em;
+}

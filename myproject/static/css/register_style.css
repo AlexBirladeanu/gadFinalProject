@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+body {
+    font-family: 'Acme';
+}
+
+.navbar {
+    font-size: 1.2em;
+  background: #1A81E5;
+  padding: 1em;
+      margin-bottom:10vh
+
+}
+
+.navbar .logo {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 1.2em;
+}
+
+.navbar .logo span {
+  color: orange;
+}
+
+.user_card {
+    border-radius:20px;
+    background: orange;
+    height:50vh;
+    width:60%
+}
