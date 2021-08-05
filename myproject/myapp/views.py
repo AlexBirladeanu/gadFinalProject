@@ -12,6 +12,9 @@ def all_restaurants(request):
 
 def my_products(request):
     context = {}
+    if(request.GET.get('DeleteButton')):
+        this_name=request.GET.get('DeleteButton')
+        print("COCOS", this_name)
     return render(request, 'my_products.html', context)
 
 
@@ -34,11 +37,12 @@ def customer_login(request):
                 'current_user': user.first(),
                 'restaurants': Restaurant.objects.all(),
             })
-    messages.info(request, 'Username or password incorrect!')
     return render(request, 'customer_login.html', context)
 
 def restaurant_login(request):
     context = {}
+    if request.GET.get('DeleteButton'):
+        Product.objects.filter(id=request.GET.get('DeleteButton')).delete()
     if request.method == 'POST':
         this_username = request.POST.get('username')
         this_password = request.POST.get('password')
@@ -48,7 +52,6 @@ def restaurant_login(request):
                 'user': user.first(),
                 'products': Product.objects.filter(restaurant=user.first())
             })
-    messages.info(request, 'Username or password incorrect!')
     return render(request, 'restaurant_login.html', context)
 
 
