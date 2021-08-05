@@ -14,7 +14,7 @@
         <a class="logo" href="http://127.0.0.1:8000/">cluj <span>bites</span></a>
         <nav>
             <span class="hello">Hello, {{current_user.username}}!&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span class="cart-text"><a href="#">Cart&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+            <span class="cart-text"><a href="{% url 'cart' current_user.username %}">Cart&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
             <span class="logout-text"><a href="customer-logout">Logout</a></span>
         </nav>
     </div>

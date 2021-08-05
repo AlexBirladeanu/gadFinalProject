@@ -100,3 +100,8 @@ def addproduct(request, restaurant_name):
         print("COCOS adaugat")
     context = {'restaurant': current_restaurant}
     return render(request, 'add_product.html', context)
+
+def cart(request, username):
+    user = Customer.objects.filter(username=username).first()
+    context = {'user': user}
+    return render(request, 'cart.html', context)

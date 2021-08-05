@@ -35,7 +35,7 @@ class Restaurant(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=200, null=True)
     price = models.FloatField()
-    image = models.ImageField(null=True, blank=True, upload_to='static/images')
+    image = models.ImageField(null=True, blank=True)
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):

@@ -31,6 +31,7 @@ urlpatterns = [
     path('restaurant-logout', restaurant_logout),
     path('restaurants', all_restaurants, name='view_restaurants'),
     path('menu/<str:restaurant_name>/<str:username>', menu, name='menu'),
+    path('cart/<str:username>', cart, name='cart')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
