@@ -86,3 +86,14 @@ def restaurant_register(request):
             form.save()
     context = {'form': form}
     return render(request, 'restaurant_register.html', context)
+
+def addproduct(request, restaurant_name):
+    current_restaurant = Restaurant.objects.filter(username=restaurant_name).first()
+    if request.method == 'POST':
+        this_name = request.POST.get('name')
+        this_price = float(request.POST.get('price'))
+        this_restaurant_name = request.POST.get('restaurant')
+        Product.objects.create(name=this_name, price=this_price, image=request.POST.get('image'), restaurant=Restaurant.objects.filter(username=this_restaurant_name).first())
+        print("COCOS adaugat")
+    context = {'restaurant': current_restaurant}
+    return render(request, 'add_product.html', context)

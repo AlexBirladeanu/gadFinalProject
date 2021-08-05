@@ -13,8 +13,8 @@
         <a class="logo" href="http://127.0.0.1:8000/">cluj <span>bites</span></a>
         <nav>
             <span class="hello">{{user.username}}&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span class="cart-text"><a href="#">Add Product&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
-            <span class="logout-text"><a href="customer-logout">Logout</a></span>
+            <span class="cart-text"><a href="{% url 'addproduct' user.username %}">Add Product&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+            <span class="logout-text"><a href="restaurant-logout">Logout</a></span>
         </nav>
     </div>
 </div>

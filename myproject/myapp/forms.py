@@ -24,9 +24,3 @@ class RegisterRestaurantForm(ModelForm):
     class Meta:
         model = Restaurant
         fields = ["username", "password", "email", 'image']
-
-
-class AddProduct(ModelForm):
-    class Meta:
-        model = Product
-        fields = []
